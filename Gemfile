@@ -28,6 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "mime-types", '2.6.2'
 
+gem "money"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
