@@ -1,0 +1,11 @@
+sudo: false
+language: ruby
+cache: bundler
+rvm:
+  - 1.9.3
+
+services: 
+  - mongodb
+
+gemfile:
+  - gemfiles/rails_4.2.gemfile
