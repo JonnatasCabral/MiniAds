@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+.progress {
+    position: relative;
+    height: 2px;
+    display: block;
+    width: 100%;
+    background-color: #acece6;
+    border-radius: 2px;
+    margin: 0.0rem 0 1rem 0; 
+    overflow: hidden;
+}

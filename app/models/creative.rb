@@ -1,6 +1,11 @@
 class Creative
   include Mongoid::Document
-  field :budget, type: Float
+  field :bid, type: Float
   field :adtext, type: String
+  belongs_to :ad, class_name:"Ad"
+
+  validates :bid, presence: true  
+  validates :adtext, presence: true 
+
 
 end

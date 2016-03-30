@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
 
 	def index
-		@creatives = Creative.all
+		@creatives = Ad.all
 	end
 end

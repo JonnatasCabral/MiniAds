@@ -1,4 +1,23 @@
 <% @creatives.each do |x| %>
-	<%= x.budget %>
-	<%= x.adtext %>
+	<ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+
+      	<i class="material-icons">filter_drama</i><%= x.budget %>
+      </div>
+      <div class="collapsible-body">
+      <p>
+      	<% x.creative.each do |y| %>
+		<%= y.bid %>
+		<%= y.adtext %>
+		<% end %>
+	  </p>
+	 	<% x.targeting.each do |y| %>
+			<%= y.places %>
+			<%= y.gender %>
+		<% end %>
+	  </div>
+    </li>
+  </ul>
 <% end %>
+ 
