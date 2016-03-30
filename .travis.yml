@@ -2,6 +2,6 @@ language: ruby
 rvm:
   - 1.9.3
 env:
-  - DB=mongobd
+  - DB=mongodb
 script:
-  - RAILS_ENV=test bundle exec rake --trace test
+  - RAILS_ENV=test bundle exec rake test
