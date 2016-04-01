@@ -2,22 +2,12 @@
 <div class="container">
 	<div class="col s6 offset-s3">
 		<div class="collection">
-		    <a href="#!" class="collection-item">
-		    	Anuncio
-		    	<span class="badge">R$ 200,00</span>
+		<% @ads.each do |ad| %>
+		    <a href="details/<%= ad.id %>" class="collection-item">
+		    	Ad
+		    	<span class="badge">R$ <%= ad.budget %></span>
 		    </a>
-		    <a href="#!" class="collection-item">
-		    	Anuncio
-		    	<span class="badge">R$ 200,00</span>
-		    </a>
-		    <a href="#!" class="collection-item">
-		    	Anuncio
-		    	<span class="badge">R$ 200,00</span>
-		    </a>
-		    <a href="#!" class="collection-item">
-		    	Anuncio
-		    	<span class="badge">R$ 200,00</span>
-		    </a>
+		<% end %>
 		</div>
 		<div class="row">
 			<ul class="pagination">

@@ -1,73 +1,51 @@
 <div class="row"></div>
 <div class="container">
-  <div class="row">
-    <div class="col s12">
-      <ul class="tabs ">
-        <li class="tab col s3 "><a href="#creatives">Creatives</a></li>
-        <li class="tab col s3"><a href="#targetings">Targetings</a></li>
+ <div class="row">
+    <div class="col s12 m9 l10">
+      <div id="introduction" class="section scrollspy">
+      <blockquote>
+        <h5>Craetives</h5>
+      </blockquote>
+          <ul class="collection">
+            <% @creatives.each do |creative| %>
+              <li class="collection-item avatar">
+
+                <i class="material-icons circle blue">description</i>
+                <p><span>R$ <%= creative.bid %></span> </p> <br>
+                <p><%= creative.adtext %> </p> 
+                <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+
+      <div id="structure" class="section scrollspy">
+        <blockquote>
+          <h5>Targetings</h5>
+        </blockquote>
+        <ul class="collection">
+            <% @targets.each do |target| %>
+              <li class="collection-item avatar">
+                
+                <i class="material-icons circle yellow">description</i>
+                <p><%= target.gender %> </p> <br>
+                <div class="chip">
+                  Tag
+                  <i class="material-icons">close</i>
+                </div>
+                <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+              </li>
+            <% end %>
+          </ul>
+        
+      </div>
+
+    </div>
+    <div class="col hide-on-small-only m3 l2">
+      <ul class="section table-of-contents">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#structure">Structure</a></li>
       </ul>
     </div>
-    <div id="creatives" class="col s12">
-    	<div class="row">
-        <ul class="collection">
-          <li class="collection-item avatar">
-            <i class="material-icons circle blue">description</i>
-            <p>First Line <br>
-               Second Line
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle blue">description</i>
-            <p>First Line Lorem ipCreativesum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
-               Second Line
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle blue">description</i>
-            <p>First Line <br>
-               Second Line
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
-    <div id="targetings" class="col s12">
-      <div class="row">
-        <ul class="collection">
-          <li class="collection-item avatar">
-            <i class="material-icons circle yellow">description</i>
-            <p>
-               
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle yellow">description</i>
-            <p>
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-
-          </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle yellow">description</i>
-            <p>First Line <br>
-               Second Line
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-        
 </div>
