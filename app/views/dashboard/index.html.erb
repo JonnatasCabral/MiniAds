@@ -3,7 +3,7 @@
 	<div class="col s6 offset-s3">
 		<div class="collection">
 		<% @ads.each do |ad| %>
-		    <a href="details/<%= ad.id %>" class="collection-item">
+		    <a href="dashboard/<%= ad.id %>" class="collection-item">
 		    	Ad
 		    	<span class="badge">R$ <%= ad.budget %></span>
 		    </a>
@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red waves-effect waves-light">
+    <a class="btn-floating btn-large red waves-effect waves-light" href="/dashboard/new">
       <i class="large material-icons">add</i>
     </a>
   </div>
