@@ -3,7 +3,7 @@
   <%= form_for(@ad) do |f| %>
   <% if @ad.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
+      <h4><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h4>
 
       <ul>
       <% @ad.errors.full_messages.each do |message| %>
@@ -22,10 +22,16 @@
       <%= c.label :bid %>
       <%= c.text_field :bid %>
     <% end %>
+      <%= f.fields_for :targeting do |c| %>
+      <%= c.label :places %>
+      <%= c.text_field :places %>
+      <%= c.label :gender %>
+      <%= c.text_field :gender %>
+    <% end %>
   </div>
   <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button>
-  
+
   <% end %>  
 </div>

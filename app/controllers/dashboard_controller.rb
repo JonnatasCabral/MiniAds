@@ -1,5 +1,7 @@
 class DashboardController < ApplicationController
 
+	before_action :set_ad, only: [:show, :edit, :update, :destroy]
+
 	def index
 		@ads = Ad.all
 	end
@@ -18,20 +20,20 @@ class DashboardController < ApplicationController
 	def destroy
 		@ad.destroy
     	respond_to do |format|
-      	format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
+      	format.html { redirect_to people_url, notice: 'Ad was successfully destroyed.' }
       	format.json { head :no_content }
-    end
+    	end
 	end
 
 	def create
-    @ad = Ad.new(ad_params)
+    	@ad = Ad.new(ad_params)
 
 	    respond_to do |format|
 	      if @ad.save
 	        format.html { redirect_to @ad, notice: 'ad was successfully created.' }
 	        format.json { render :show, status: :created, location: @ad }
 	      else
-	        format.html { render :new }
+	        format.html { render action: 'new' }
 	        format.json { render json: @ad.errors, status: :unprocessable_entity }
 	      end
 	    end
@@ -45,6 +47,8 @@ class DashboardController < ApplicationController
     	end
 
 		def ad_params
-	      params.require(:ad).permit(:budget, creative:[:bid, :adtext])
+	      params.require(:ad).permit(:budget,
+	      	creative:[:id, :bid, :adtext],
+	      	creative:[:id, :places, :gender])
 	    end
 end
