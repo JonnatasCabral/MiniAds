@@ -17,17 +17,15 @@
     <%= f.label :budget %><br>
     <%= f.text_field :budget %>
     <%= f.fields_for :creative do |c| %>
-      <%= c.label :adtext %>
-      <%= c.text_field :adtext %>
-      <%= c.label :bid %>
-      <%= c.text_field :bid %>
+      <%= render 'creative_fields', f: c %>      
     <% end %>
-      <%= f.fields_for :targeting do |c| %>
-      <%= c.label :places %>
-      <%= c.text_field :places %>
-      <%= c.label :gender %>
-      <%= c.text_field :gender %>
+    <%= link_to_add_fields "Add Creative", f, :creative %>
+    <%= f.fields_for :targeting do |t| %>
+      <%= render 'targeting_fields', f: t %>      
     <% end %>
+    <%= link_to_add_fields "Add Targeting", f, :targeting %>
+    
+
   </div>
   <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>

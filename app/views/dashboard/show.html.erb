@@ -7,7 +7,8 @@
         <h5>Craetives</h5>
       </blockquote>
           <ul class="collection">
-            <% @creatives.each do |creative| %>
+
+            <% @ad.creative.each do |creative| %>
               <li class="collection-item avatar">
 
                 <i class="material-icons circle blue">description</i>
@@ -24,13 +25,13 @@
           <h5>Targetings</h5>
         </blockquote>
         <ul class="collection">
-            <% @targets.each do |target| %>
+            <% @ad.targeting.each do |target| %>
               <li class="collection-item avatar">
                 
                 <i class="material-icons circle yellow">description</i>
                 <p><%= target.gender %> </p> <br>
                 <div class="chip">
-                  Tag
+                  <%= target.places %>
                 </div>
                 <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
               </li>
@@ -40,6 +41,11 @@
       </div>
 
     </div>
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red waves-effect waves-light" href="/dashboard/edit">
+      <i class="large material-icons">edit</i>
+    </a>
+  </div>
     <div class="col hide-on-small-only m3 l2">
       <ul class="section table-of-contents">
         <li><a href="#introduction">Introduction</a></li>

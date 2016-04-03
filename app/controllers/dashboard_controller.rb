@@ -7,22 +7,13 @@ class DashboardController < ApplicationController
 	end
 
 	def show
-		@creatives = Creative.all
-		@targets = Targeting.all
+		@ad = Ad.find(params[:id])
 	end
 
 	def new
 		@ad = Ad.new
 		@ad.creative.build
 		@ad.targeting.build
-	end
-
-	def destroy
-		@ad.destroy
-    	respond_to do |format|
-      	format.html { redirect_to people_url, notice: 'Ad was successfully destroyed.' }
-      	format.json { head :no_content }
-    	end
 	end
 
 	def create
@@ -39,7 +30,16 @@ class DashboardController < ApplicationController
 	    end
 	end
 
-
+	def edit
+    	@ad = Ad.find(params[:id])
+  	end
+	def destroy
+		@ad = Ad.find(params[:id])
+		@ad.destroy
+    	respond_to do |format|
+	      	format.html { redirect_to people_url, notice: 'Ad was successfully destroyed.' }
+    	end
+	end
 
 	private
 		def set_ad
@@ -48,7 +48,7 @@ class DashboardController < ApplicationController
 
 		def ad_params
 	      params.require(:ad).permit(:budget,
-	      	creative:[:id, :bid, :adtext],
-	      	creative:[:id, :places, :gender])
+	      	creative_attributes:[:id, :bid, :adtext, :_destroy],
+	      	targeting_attributes:[:id, :places, :gender, :_destroy])
 	    end
 end
