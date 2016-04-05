@@ -30,6 +30,19 @@ class DashboardController < ApplicationController
 	    end
 	end
 
+	def update
+
+	    respond_to do |format|
+	      if @ad.update(ad_params)
+	        format.html { redirect_to @ad, notice: 'ad was successfully created.' }
+	        format.json { render :show, status: :created, location: @ad }
+	      else
+	        format.html { render action: 'new' }
+	        format.json { render json: @ad.errors, status: :unprocessable_entity }
+	      end
+	    end
+	end
+
 	def edit
     	@ad = Ad.find(params[:id])
   	end

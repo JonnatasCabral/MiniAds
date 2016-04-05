@@ -14,7 +14,7 @@
                 <i class="material-icons circle blue">description</i>
                 <p><span>R$ <%= creative.bid %></span> </p> <br>
                 <p><%= creative.adtext %> </p> 
-                <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+                <div class="secondary-content"> </div>
               </li>
             <% end %>
           </ul>
@@ -30,10 +30,11 @@
                 
                 <i class="material-icons circle yellow">description</i>
                 <p><%= target.gender %> </p> <br>
+                <span>Lugares:</span>
                 <div class="chip">
                   <%= target.places %>
                 </div>
-                <a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+                <div class="secondary-content"> </div>
               </li>
             <% end %>
           </ul>
@@ -42,7 +43,7 @@
 
     </div>
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red waves-effect waves-light" href="/dashboard/edit">
+    <a class="btn-floating btn-large red waves-effect waves-light" href="/dashboard/<%= @ad.id %>/edit">
       <i class="large material-icons">edit</i>
     </a>
   </div>
