@@ -51,7 +51,7 @@
       <ul>
         
         <li>
-            <%= link_to ('<i class="material-icons">delete </i>').html_safe , @ad,{ method: :delete, class: :'btn-floating red darken-1', data: { confirm: 'Are you sure?' } }%>
+            <%= link_to ('<i class="material-icons">delete </i>').html_safe , @ad,{ method: :delete, class: :'btn-floating red darken-1', data: { confirm: 'Confirma a remoção deste Ad?' } }%>
           </a>
         </li>
         <li><a href="/dashboard/<%= @ad.id %>/edit" class="btn-floating yellow"><i class="material-icons">mode_edit</i></a></li>
@@ -60,8 +60,8 @@
         
     <div class="col hide-on-small-only m3 l2">
       <ul class="section table-of-contents">
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#structure">Structure</a></li>
+        <li><a href="#introduction">Creatives</a></li>
+        <li><a href="#structure">Targets</a></li>
       </ul>
     </div>
   </div>

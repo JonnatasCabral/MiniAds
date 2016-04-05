@@ -1,5 +1,6 @@
 <div class="row"></div>
 <div class="container">
+<h4>Formulário Ad </h4>
   <%= form_for(@ad) do |f| %>
   <% if @ad.errors.any? %>
     <div id="error_explanation">
@@ -14,22 +15,46 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :budget %><br>
-    <%= f.text_field :budget %>
-    <%= f.fields_for :creative do |c| %>
-      <%= render 'creative_fields', f: c %>      
-    <% end %>
-    <%= link_to_add_fields "Add Creative", f, :creative %>
-    <%= f.fields_for :targeting do |t| %>
-      <%= render 'targeting_fields', f: t %>      
-    <% end %>
-    <%= link_to_add_fields "Add Targeting", f, :targeting %>
-    
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+          <%= f.label :budget %><br>
+          <%= f.text_field :budget %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <blockquote>
+        <h5>Craetives</h5>
+      </blockquote>
+    </div>
+    <div class="row">
+      <%= f.fields_for :creative do |c| %>
+        <%= render 'creative_fields', f: c %>      
+      <% end %>
+    </div>
+    <div class="row">
+       <%= link_to_add_fields ('<button class="btn tooltipped blue" data-position="bottom" data-delay="50" data-tooltip="Adicionar Creative"> adicionar</button>').html_safe , f, :creative %>
+    </div>
 
-  </div>
-  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
-
+    <div class="row">
+      <blockquote>
+        <h5>Targets</h5>
+      </blockquote>
+    </div>
+      
+    <div class="row">
+      <%= f.fields_for :targeting do |t| %>
+        <%= render 'targeting_fields', f: t %>      
+      <% end %>
+    </div>
+    <div class="row">
+      <%= link_to_add_fields ('<button class="btn tooltipped blue" data-position="bottom" data-delay="50" data-tooltip="Adicionar Targeting"> adicionar</button>').html_safe , f, :targeting %>
+    </div>
+    </div>
+    <div class="row">  
+      <button class="btn waves-effect waves-light green col s2 offset-s10" type="submit" name="action">Salvar</button>
+    </div>
   <% end %>  
 </div>
+<div class="row"></div>

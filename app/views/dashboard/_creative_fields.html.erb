@@ -1,8 +1,12 @@
-<fieldset>
-  <%= f.label :adtext, "AdText" %>
-	<%= f.text_area :adtext %>
-	<%= f.label :bid %>
-	<%= f.text_field :bid %>
-  <%= f.hidden_field :_destroy %>
-  <%= link_to "remove", '#', class: "remove_fields" %>
-</fieldset>
+<div class="card">
+	<div class="card-content">
+	<div class="row">
+	</div>
+	  <%= f.label :adtext, "AdText" %>
+		<%= f.text_field :adtext %>
+		<%= f.label :bid %>
+		<%= f.text_field :bid %>
+	  <%= f.hidden_field :_destroy %>
+	  <%= link_to "remover", '#', class: "remove_fields btn red waves-effect waves-light" %>
+	</div>
+</div>
