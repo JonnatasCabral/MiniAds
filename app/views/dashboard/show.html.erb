@@ -3,16 +3,19 @@
  <div class="row">
     <div class="col s12 m9 l10">
       <div id="introduction" class="section scrollspy">
+      <div class="row">
+        <h5>Valor Total: <%= @ad.budget %></h5>
+      </div>
       <blockquote>
         <h5>Craetives</h5>
+
       </blockquote>
           <ul class="collection">
-
             <% @ad.creative.each do |creative| %>
               <li class="collection-item avatar">
 
                 <i class="material-icons circle blue">description</i>
-                <p><span>R$ <%= creative.bid %></span> </p> <br>
+                <p>Valor: R$ <%= creative.bid %> </p> <br>
                 <p><%= creative.adtext %> </p> 
                 <div class="secondary-content"> </div>
               </li>
@@ -29,7 +32,7 @@
               <li class="collection-item avatar">
                 
                 <i class="material-icons circle yellow">description</i>
-                <p><%= target.gender %> </p> <br>
+                <p><span>Gênero:</span> <%= target.gender %> </p> <br>
                 <span>Lugares:</span>
                 <div class="chip">
                   <%= target.places %>
@@ -38,15 +41,23 @@
               </li>
             <% end %>
           </ul>
-        
       </div>
 
     </div>
-    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red waves-effect waves-light" href="/dashboard/<%= @ad.id %>/edit">
-      <i class="large material-icons">edit</i>
-    </a>
-  </div>
+     <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">settings</i>
+      </a>
+      <ul>
+        
+        <li>
+            <%= link_to ('<i class="material-icons">delete </i>').html_safe , @ad,{ method: :delete, class: :'btn-floating red darken-1', data: { confirm: 'Are you sure?' } }%>
+          </a>
+        </li>
+        <li><a href="/dashboard/<%= @ad.id %>/edit" class="btn-floating yellow"><i class="material-icons">mode_edit</i></a></li>
+      </ul>
+    </div>
+        
     <div class="col hide-on-small-only m3 l2">
       <ul class="section table-of-contents">
         <li><a href="#introduction">Introduction</a></li>
