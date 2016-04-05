@@ -30,6 +30,8 @@ gem "mime-types", '2.6.2'
 
 gem "money"
 
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

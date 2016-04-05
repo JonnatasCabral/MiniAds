@@ -1,6 +1,6 @@
 class Ad
   include Mongoid::Document
-  
+  paginates_per 10
   has_many :creative,  class_name:"Creative"
   has_many :targeting, class_name:"Targeting"
   field :budget, type: Float
