@@ -15,7 +15,7 @@
             <% @ad.creative.each do |creative| %>
               <li class="collection-item avatar">
 
-                <i class="material-icons circle blue">description</i>
+                <i class="material-icons circle orange">description</i>
                 <p>Valor: R$ <%= creative.bid %> </p> <br>
                 <p><%= creative.adtext %> </p> 
                 <div class="secondary-content"> </div>
@@ -32,7 +32,7 @@
             <% @ad.targeting.each do |target| %>
               <li class="collection-item avatar">
                 
-                <i class="material-icons circle yellow">description</i>
+                <i class="material-icons circle purple">navigation</i>
                 <p><span>Gênero:</span> <%= target.gender %> </p> <br>
                 <span>Lugares:</span>
                 <div class="chip">
