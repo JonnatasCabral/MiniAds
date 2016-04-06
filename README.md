@@ -3,7 +3,7 @@
 # MiniAds
 
 ### build project
-* clone git@github.com:JonnatasCabral/MiniAds.git
+* clone `git@github.com:JonnatasCabral/MiniAds.git`
 * bundle install
 * bower install
 
