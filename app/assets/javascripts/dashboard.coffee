@@ -5,6 +5,7 @@
 jQuery ->
   $(document).on 'ready page:load', ->
     $(document).trigger('refresh_autonumeric');
+    $('.tooltipped').tooltip({delay: 50});
 
   $(document).on 'click', '.remove_fields', (event) ->
     $(this).prev('input[type=hidden]').val('1')
