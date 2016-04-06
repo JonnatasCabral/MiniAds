@@ -4,7 +4,7 @@ class Creative
   field :adtext, type: String
   belongs_to :ad, class_name:"Ad"
 
-  validates :bid, presence: true  
+  validates :bid, numericality: { greater_than: 0 }
   validates :adtext, presence: true 
 
 

@@ -5,7 +5,7 @@
 	  <%= f.label :adtext, "AdText" %>
 		<%= f.text_field :adtext %>
 		<%= f.label :bid %>
-		<%= f.text_field :bid %>
+		<%= f.text_field :bid, class: "currency" %>
 	  <%= f.hidden_field :_destroy %>
 	  <%= link_to "remover", '#', class: "remove_fields btn red waves-effect waves-light" %>
 	</div>

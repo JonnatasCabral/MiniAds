@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require Materialize/dist/js/materialize
+//= require jquery-maskmoney/dist/jquery.maskMoney.min.js
+
+
