@@ -3,6 +3,7 @@
 # MiniAds
 
 ### Dependencies
+* MongoDB 
 * Rails 4
 * NojeJS
 * bower
