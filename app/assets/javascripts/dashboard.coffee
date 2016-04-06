@@ -4,7 +4,8 @@
 
 jQuery ->
   $(document).on 'ready page:load', ->
-    $('.currency').maskMoney();
+    $(document).trigger('refresh_autonumeric');
+
   $(document).on 'click', '.remove_fields', (event) ->
     $(this).prev('input[type=hidden]').val('1')
     $(this).closest('.card').hide()
@@ -15,4 +16,4 @@ jQuery ->
     regexp = new RegExp($(this).data('id'), 'g')
     $(this).before($(this).data('fields').replace(regexp, time))
     event.preventDefault()
-    $('.currency').maskMoney();
+    $(document).trigger('refresh_autonumeric');

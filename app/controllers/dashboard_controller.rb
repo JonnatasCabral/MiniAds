@@ -21,7 +21,7 @@ class DashboardController < ApplicationController
 
 	    respond_to do |format|
 	      if @ad.save
-	        format.html { redirect_to @ad, notice: 'ad was successfully created.' }
+	        format.html { redirect_to @ad, notice: 'Ad criado com sucesso.' }
 	      else
 	        format.html { render action: 'new' }
 	      end
@@ -32,7 +32,7 @@ class DashboardController < ApplicationController
 
 	    respond_to do |format|
 	      if @ad.update(ad_params)
-	        format.html { redirect_to @ad, notice: 'ad was successfully created.' }
+	        format.html { redirect_to @ad, notice: 'Ad atualizado com sucesso.' }
 	      else
 	        format.html { render action: 'new' }
 	      end
@@ -46,7 +46,7 @@ class DashboardController < ApplicationController
 		@ad = Ad.find(params[:id])
 		@ad.destroy
     	respond_to do |format|
-	      	format.html { redirect_to @ad, notice: 'Ad was successfully destroyed.' }
+	      	format.html { redirect_to @ad, notice: 'Ad foi deletadod com sucesso.' }
     	end
 	end
 

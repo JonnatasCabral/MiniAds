@@ -15,12 +15,12 @@
   <% end %>
 
   <div class="field">
-  
+
     <div class="row">
       <div class="card">
         <div class="card-content">
           <%= f.label :budget %><br>
-          <%= f.text_field :budget, class: "currency" %>
+          <%= f.text_field :budget,  data: {autonumeric: true}, placeholder:'R$00,00' %>
         </div>
       </div>
     </div>

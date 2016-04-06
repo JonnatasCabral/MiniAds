@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "Materialize": "materialize#^0.97.5",
-    "jquery-maskmoney": "^3.0.2"
   },
   "private": true
 }
