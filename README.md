@@ -6,8 +6,8 @@
 * MongoDB 
 * Rails 4
 * NojeJS
-* bower
-* bundle
+* Bower
+* Bundle
 
 
 ### Setup project
