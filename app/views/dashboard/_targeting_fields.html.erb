@@ -2,11 +2,16 @@
 	<div class="card-content">
 	<div class="row">
 	</div>
+    
 	  <%= f.label :places, "places" %>
 	  <%= f.text_field :places %>
 	  <%= f.label :gender, "gender" %>
-	  <%= f.text_field :gender %>
+	  <%= f.select(:gender) do %>
+		  <% [['Masculino', 'Masculino'], ['Feminino', 'Feminino'], ['Indefinido', 'Indefinido']].each do |c| -%>
+		    <%= content_tag(:option, c.first, value: c.last) %>
+		  <% end %>
+		<% end %>
 	  <%= f.hidden_field :_destroy %>
-	  <%= link_to "remover", '#', class: "remove_fields btn red waves-effect waves-light" %>
+	  <%= link_to "remove", '#', class: "remove_fields btn red waves-effect waves-light" %>
 	</div>
 </div>
