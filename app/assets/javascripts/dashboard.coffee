@@ -6,6 +6,7 @@ jQuery ->
   $(document).on 'ready page:load', ->
     $(document).trigger('refresh_autonumeric');
     $('.tooltipped').tooltip({delay: 50});
+    $('select').material_select();
 
   $(document).on 'click', '.remove_fields', (event) ->
     $(this).prev('input[type=hidden]').val('1')
@@ -20,5 +21,3 @@ jQuery ->
     $(document).trigger('refresh_autonumeric');
     $('select').material_select();
 
-  $(document).on 'ready page:load', ->
-    $('select').material_select();

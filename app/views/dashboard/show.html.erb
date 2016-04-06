@@ -35,9 +35,12 @@
                 <i class="material-icons circle purple">navigation</i>
                 <p><span>Gênero:</span> <%= target.gender %> </p> <br>
                 <span>Lugares:</span>
-                <div class="chip">
-                  <%= target.places %>
-                </div>
+
+                <% target.places.each do |p|%>
+                  <div class="chip">
+                    <%= p %>
+                  </div>
+                <% end %>
                 <div class="secondary-content"> </div>
               </li>
             <% end %>

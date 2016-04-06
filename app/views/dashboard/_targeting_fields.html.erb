@@ -4,7 +4,8 @@
 	</div>
     
 	  <%= f.label :places, "places" %>
-	  <%= f.text_field :places %>
+	  <%= f.text_field :places_list , placeholder: "Separe seus locais por virgula como: Recife, Olinda" %>
+
 	  <%= f.label :gender, "gender" %>
 	  <%= f.select(:gender) do %>
 		  <% [['----', ''], ['Masculino', 'Masculino'], ['Feminino', 'Feminino'], ['Indefinido', 'Indefinido']].each do |c| -%>

@@ -18,7 +18,6 @@ class DashboardController < ApplicationController
 
 	def create
     	@ad = Ad.new(ad_params)
-
 	    respond_to do |format|
 	      if @ad.save
 	        format.html { redirect_to @ad, notice: 'Ad criado com sucesso.' }
@@ -29,7 +28,6 @@ class DashboardController < ApplicationController
 	end
 
 	def update
-
 	    respond_to do |format|
 	      if @ad.update(ad_params)
 	        format.html { redirect_to @ad, notice: 'Ad atualizado com sucesso.' }
@@ -58,6 +56,6 @@ class DashboardController < ApplicationController
 		def ad_params
 	      params.require(:ad).permit(:budget,
 	      	creative_attributes:[:id, :bid, :adtext, :_destroy],
-	      	targeting_attributes:[:id, :places, :gender, :_destroy])
+	      	targeting_attributes:[:id, :places_list, :places, :gender, :_destroy])
 	    end
 end
