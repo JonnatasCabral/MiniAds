@@ -7,7 +7,7 @@
 	  <%= f.text_field :places %>
 	  <%= f.label :gender, "gender" %>
 	  <%= f.select(:gender) do %>
-		  <% [['Masculino', 'Masculino'], ['Feminino', 'Feminino'], ['Indefinido', 'Indefinido']].each do |c| -%>
+		  <% [['----', ''], ['Masculino', 'Masculino'], ['Feminino', 'Feminino'], ['Indefinido', 'Indefinido']].each do |c| -%>
 		    <%= content_tag(:option, c.first, value: c.last) %>
 		  <% end %>
 		<% end %>
