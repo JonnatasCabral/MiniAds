@@ -5,7 +5,7 @@
 	  <%= f.label :adtext, "AdText" %>
 		<%= f.text_field :adtext , placeholder:'Digite seu texto aqui...'%>
 		<%= f.label :bid %>
-		<%= f.text_field :bid, data: {autonumeric: true}, placeholder:'R$00,00' %>
+		<%= f.text_field :bid, data: {autonumeric: {aSign: 'R$ ', mDec: 0}}, placeholder:'R$00,00' %>
 	  <%= f.hidden_field :_destroy %>
 	  <%= link_to "remove", '#', class: "remove_fields btn red waves-effect waves-light" %>
 	</div>
