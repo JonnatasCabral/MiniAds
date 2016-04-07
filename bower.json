@@ -2,7 +2,7 @@
   "name": "chili",
   "version": "0.0.1",
   "dependencies": {
-    "Materialize": "materialize#^0.97.5",
+    "Materialize": "materialize#^0.97.5"
   },
   "private": true
 }
