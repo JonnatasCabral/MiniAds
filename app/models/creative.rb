@@ -19,4 +19,15 @@ class Creative
 			self.bid < self.ad.budget
 		end
 	end
+
+	def bid_mask
+		return helper.number_to_currency(self.bid, precision: 2)
+	end 
+
+	private
+	  def helper
+	    @helper ||= Class.new do
+	      include ActionView::Helpers::NumberHelper
+	    end.new
+	  end
 end

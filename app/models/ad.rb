@@ -22,4 +22,15 @@ class Ad
     collection.any? ? collection : questions.build
   end
 
+
+  def ad_mask
+    return helper.number_to_currency(self.budget, precision: 2)
+  end 
+
+  private
+    def helper
+      @helper ||= Class.new do
+        include ActionView::Helpers::NumberHelper
+      end.new
+    end
 end
