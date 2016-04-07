@@ -7,7 +7,7 @@
 			<% @ads.each do |ad| %>
 			    <a href="dashboard/<%= ad.id %>" class="collection-item">
 			    	Ad
-			    	<span class="badge">R$ <%= ad.budget %></span>
+			    	<span class="badge"> <%= ad.budget_mask %></span>
 			    </a>
 			<% end %>
 			</div>

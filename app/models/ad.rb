@@ -23,7 +23,7 @@ class Ad
   end
 
 
-  def ad_mask
+  def budget_mask
     return helper.number_to_currency(self.budget, precision: 2)
   end 
 

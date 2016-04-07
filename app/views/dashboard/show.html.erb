@@ -4,7 +4,7 @@
     <div class="col s12 m9 l10">
       <div id="introduction" class="section scrollspy">
       <div class="row">
-        <h5>Valor Total: <%= @ad.ad_mask %></h5>
+        <h5>Valor Total: <%= @ad.budget_mask %></h5>
       </div>
       <blockquote>
         <h5>Craetives</h5>
@@ -16,7 +16,7 @@
               <li class="collection-item avatar">
 
                 <i class="material-icons circle orange">description</i>
-                <p>Valor: R$ <%= creative.bid_mask %> </p> <br>
+                <p>Valor: <%= creative.bid_mask %> </p> <br>
                 <p><%= creative.adtext %> </p> 
                 <div class="secondary-content"> </div>
               </li>
