@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
 .progress {
     position: relative;
     height: 2px;
