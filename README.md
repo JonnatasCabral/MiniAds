@@ -8,6 +8,8 @@
 * NojeJS
 * Bower
 * Bundle
+* Ruby 1.9.3 `gem 'debugger'`  or ruby 2.+ `gem 'pry-byebug'`
+
 
 
 ### Setup project
