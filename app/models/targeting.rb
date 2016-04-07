@@ -13,5 +13,4 @@ class Targeting
   def places_list
     self.places.join(', ')
   end
-
 end
