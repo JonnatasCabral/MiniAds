@@ -27,6 +27,14 @@ class Ad
     return helper.number_to_currency(self.budget, precision: 2)
   end 
 
+  def bid_value_total
+    total = 0
+    self.creative.each do |c|
+      total += c.bid
+    end 
+    return total
+  end
+
   private
     def helper
       @helper ||= Class.new do
