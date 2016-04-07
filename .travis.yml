@@ -1,8 +1,13 @@
-language: ruby
-services: mongodb
+sudo: false
+services:
+  - mongodb
 rvm:
   - 1.9.3
-env:
-  - DB=mongodb
+  - 2.0
+  - 2.1
+
+before_script:
+  - npm install bower
 script:
+  - bower install
   - RAILS_ENV=test bundle exec rake test
