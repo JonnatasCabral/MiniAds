@@ -16,3 +16,12 @@
 //= require Materialize/dist/js/materialize
 //= require autonumeric
 
+jQuery(document).ready(function($) {  
+
+	$(window).load(function(){
+		$('.progress').show();
+		$('.progress').fadeOut('slow',function(){$(this).remove();});
+	});
+
+});
+

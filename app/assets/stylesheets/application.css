@@ -18,13 +18,14 @@
   }
 .progress {
     position: relative;
-    height: 2px;
+    height: 4px;
     display: block;
     width: 100%;
     background-color: #acece6;
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 0.0rem 0 1rem 0; 
-    overflow: hidden;
+    overflow: visible;
+    display: none;
 }
 .nav-wrapper {
     top: 0;

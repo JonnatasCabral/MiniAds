@@ -10,7 +10,7 @@ class Creative
 
 	def bid_value
 		unless bid_validate
-			errors.add(:bid, 'O bid deve ser menor que o budget')
+			ad.errors.add(:ad, 'O valor bid deve ser menor que o budget')
 		end
 	end
 

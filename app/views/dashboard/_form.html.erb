@@ -3,7 +3,7 @@
   <%= form_for(@ad) do |f| %>
   <% if @ad.errors.any? %>
     <div id="error_explanation">
-      <h4><%= pluralize(@ad.errors.count, "Erro") %> causado por:</h4>
+      <h5><%= pluralize(@ad.errors.count, "erros encontrado")%> </h5>
 
       <ul>
       <% @ad.errors.full_messages.each do |message| %>

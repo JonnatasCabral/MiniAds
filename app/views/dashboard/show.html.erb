@@ -17,9 +17,9 @@
               <li class="collection-item avatar">
 
                 <i class="material-icons circle orange">description</i>
-                <p>Valor: <%= creative.bid_mask %> </p> <br>
-                <p class="flow-text"><%= creative.adtext %></p>  
-                <div class="secondary-content"> </div>
+                 <h6>Texto:</h6>
+                <p class="text"><%= creative.adtext %></p>  
+                <div class="secondary-content"> <p>Valor: <%= creative.bid_mask %> </p></div>
               </li>
             <% end %>
           </ul>
@@ -33,16 +33,17 @@
             <% @ad.targeting.each do |target| %>
               <li class="collection-item avatar">
                 
-                <i class="material-icons circle purple">navigation</i>
-                <p><span>Gênero:</span> <%= target.gender %> </p> <br>
-                <span>Lugares:</span>
+                <i class="material-icons circle gold">navigation</i>
+                <h6>Lugares:</h6>
 
                 <% target.places.each do |p|%>
                   <div class="chip">
                     <%= p %>
                   </div>
                 <% end %>
-                <div class="secondary-content"> </div>
+                <div class="secondary-content"> 
+                <br>
+                <p><span>Gênero:</span> <%= target.gender %> </p> </div>
               </li>
             <% end %>
           </ul>
