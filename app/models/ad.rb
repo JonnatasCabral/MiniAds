@@ -7,9 +7,9 @@ class Ad
 
   accepts_nested_attributes_for :creative, allow_destroy: true
   accepts_nested_attributes_for :targeting, allow_destroy: true
-  validates :budget, numericality: { greater_than: 0 }
-  validates :creative, :length => { :minimum => 1 }
-  validates :targeting, :length => { :minimum => 1 }
+  validates :budget, numericality: { greater_than: 0 , message: 'O Valor do budget deve ser maior que R$0.00'}
+  validates :creative, length: { minimum: 1 , message: 'error: Deve ter pelo menos um Creative'}
+  validates :targeting, length: { minimum: 1, message: 'error: Deve ter pelo menos um Creative' }
 
 
   def creative_for_form

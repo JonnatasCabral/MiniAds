@@ -4,7 +4,7 @@ class Creative
   field :adtext, type: String
   belongs_to :ad, class_name:"Ad"
 
-  validates :bid, numericality: { greater_than: 0 }
+  validates :bid, numericality: { greater_than: 0, message: 'O valor do bid deve ser maior que R$0.00'}
   validates :adtext, presence: true 
   validate :bid_value
 
